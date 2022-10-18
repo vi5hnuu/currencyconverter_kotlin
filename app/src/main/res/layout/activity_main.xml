@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@drawable/currencybg"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CURRENCY CONVERTER"
+        android:textSize="22dp"
+        android:textColor="#fff"
+        android:textFontWeight="900"
+        android:fontFamily="monospace"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center"
+        android:src="@drawable/currconverticon"
+        android:layout_marginBottom="15dp"
+        />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_marginBottom="20dp"
+        >
+        <Spinner
+            android:id="@+id/fromCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:elevation="12dp"
+            android:layout_columnWeight="1"
+            />
+        <TextView
+            android:text="Indian Rupee"
+            android:textColor="#fff"
+            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:elevation="12dp" />
+        <EditText
+            android:id="@+id/fromCurrencytf"
+            android:hint="5.5"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textfiled_drawable"
+            android:padding="5dp"
+            android:layout_marginRight="1dp"
+            android:inputType="numberDecimal"
+            />
+        <TextView
+            android:id="@+id/toCurrencytv"
+            android:hint="₹ 0.0"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="1dp"
+            android:background="@drawable/textfiled_drawable"
+            android:padding="7.3dp"
+            android:inputType="numberDecimal"
+            />
+        <Button
+            android:id="@+id/btnConvert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert"
+            android:layout_gravity="center"
+            android:layout_columnSpan="2"
+            android:layout_marginTop="20dp"
+            />
+    </GridLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:padding="10dp"
+        android:background="@drawable/fact_drawable"
+        android:text="@string/currency_factss"
+        />
+
+</LinearLayout>
